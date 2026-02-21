@@ -2,7 +2,7 @@
 
 // custom.tsのnamespaceと合わせる
 namespace stm32io {
-    
+    // ??
     /**
      * STM32の特定のGPIOピンをHighにする
      */
