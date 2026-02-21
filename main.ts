@@ -1,1 +1,1 @@
-
+myExtension.helloWorld(0)
