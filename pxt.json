@@ -9,9 +9,9 @@
         "main.ts",
         "custom.ts",
         "f411.cpp",
-        "shims.d.ts",
         "README.md",
-        "assets.json"
+        "assets.json",
+        "shims.d.ts"
     ],
     "testFiles": [
         "test.ts"
