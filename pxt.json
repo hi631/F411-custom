@@ -7,6 +7,8 @@
     "files": [
         "main.blocks",
         "main.ts",
+        "custom.ts",
+        "f411.cpp",
         "README.md",
         "assets.json"
     ],
