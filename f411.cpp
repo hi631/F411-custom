@@ -17,7 +17,7 @@ namespace myExtension {
 		  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	  } else {
 		  GPIO_InitStruct.Mode = GPIO_MODE_INPUT; // 入力モード
-		  GPIO_InitStruct.Pull = GPIO_NOPULL;     // 必要に応じてPULLUP/PULLDOWNに変更
+		  GPIO_InitStruct.Pull = GPIO_PULLUP;     // 必要に応じてPULLUP/PULLDOWNに変更
 	  }
 	  HAL_GPIO_Init(GPIOx, &GPIO_InitStruct);
 }
