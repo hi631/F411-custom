@@ -15,18 +15,20 @@ namespace myExtension {
 }
 
     //%
-    void f411_gpio(int value, int count) {
+    void f411_gpioc(int value, int count) {
 
         int gpin=1 << value;
         init_gpio(GPIOC, gpin);
-        int tc;
-        int lc=count;
-        while(lc--) {
-            HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_SET);    // off
-            tc=0x200000; while(tc--) { __NOP();  }
-            HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_RESET);  // on
-            tc=0x200000; while(tc--) { __NOP();  }
-        }
+        if(count==0) HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_SET);    // off
+        else         HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_RESET);  // on
+        //int tc;
+        //int lc=count;
+        //while(lc--) {
+        //    HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_SET);    // off
+        //    tc=0x200000; while(tc--) { __NOP();  }
+        //    HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_RESET);  // on
+        //    tc=0x200000; while(tc--) { __NOP();  }
+        //}
     }
 }
 
