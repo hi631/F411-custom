@@ -1,1 +1,1 @@
-myExtension.helloWorld(0)
+myExtension.helloWorld(13,10)
