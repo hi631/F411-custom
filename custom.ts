@@ -1,5 +1,5 @@
-//% color="#AA278D" icon="\uf11b" block="My Extension"
-namespace myExtension {
+//% color="#AA278D" icon="\uf11b" block="f411 Extension"
+namespace f411Extension {
     /**
      * STM32F411で出力するブロック
      */
