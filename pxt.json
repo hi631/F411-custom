@@ -11,7 +11,11 @@
         "f411.cpp",
         "README.md",
         "assets.json",
-        "shims.d.ts"
+        "shims.d.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
