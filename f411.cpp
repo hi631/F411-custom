@@ -24,91 +24,43 @@ namespace myExtension {
 //-- output  --------------------------------------------------------------
     //%
    void f411_gpioa(int value, int count) {
-        int rc;
         int gpin=1 << value;
         if(init_gpioa!=1) { init_gpio(GPIOA, gpin, 1); init_gpioa = 1;}
-        if(count<2) {
             if(count==0) HAL_GPIO_WritePin(GPIOA, gpin, GPIO_PIN_SET);    // off
             else         HAL_GPIO_WritePin(GPIOA, gpin, GPIO_PIN_RESET);  // on
-            rc = 0;
-        } else {
-            rc = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
-        }
-        //return rc;
     }
     //%
     void f411_gpiob(int value, int count) {
-        int rc;
         int gpin=1 << value;
         if(init_gpiob!=1) { init_gpio(GPIOB, gpin, 1); init_gpiob = 1;}
-        if(count<2) {
             if(count==0) HAL_GPIO_WritePin(GPIOB, gpin, GPIO_PIN_SET);    // off
             else         HAL_GPIO_WritePin(GPIOB, gpin, GPIO_PIN_RESET);  // on
-            rc=00;
-        } else {
-            rc=HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0);
-        }
-        //return rc;
     }
     //%
     void f411_gpioc(int value, int count) {
-        int rc;
         int gpin=1 << value;
         if(init_gpioc!=1) { init_gpio(GPIOC, gpin, 1); init_gpioc = 1;}
-        if(count<2) {
             if(count==0) HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_SET);    // off
             else         HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_RESET);  // on
-            rc = 0;
-        } else {
-            rc = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_0);
-        }
-        //return rc;
     }
 //-- input  -------------------------------------------------------------------------
     //%
    int f411_gpioa_in(int value) {
-        int rc;
-        int count = 2;
         int gpin=1 << value;
         if(init_gpioa!=2) { init_gpio(GPIOA, gpin, 2); init_gpioa = 2;}
-        if(count<2) {
-            if(count==0) HAL_GPIO_WritePin(GPIOA, gpin, GPIO_PIN_SET);    // off
-            else         HAL_GPIO_WritePin(GPIOA, gpin, GPIO_PIN_RESET);  // on
-            rc = 0;
-        } else {
-            rc = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
-        }
-        return rc;
+        return HAL_GPIO_ReadPin(GPIOA, gpin);
     }
     //%
     int f411_gpiob_in(int value) {
-        int rc;
-        int count = 2;
         int gpin=1 << value;
         if(init_gpiob!=2) { init_gpio(GPIOB, gpin, 2); init_gpiob = 2;}
-        if(count<2) {
-            if(count==0) HAL_GPIO_WritePin(GPIOB, gpin, GPIO_PIN_SET);    // off
-            else         HAL_GPIO_WritePin(GPIOB, gpin, GPIO_PIN_RESET);  // on
-            rc=00;
-        } else {
-            rc=HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0);
-        }
-        return rc;
+        return HAL_GPIO_ReadPin(GPIOB, gpin);
     }
     //%
     int f411_gpioc_in(int value) {
-        int rc;
-        int count = 2;
         int gpin=1 << value;
         if(init_gpioc!=2) { init_gpio(GPIOC, gpin, 2); init_gpioc = 2;}
-        if(count<2) {
-            if(count==0) HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_SET);    // off
-            else         HAL_GPIO_WritePin(GPIOC, gpin, GPIO_PIN_RESET);  // on
-            rc = 0;
-        } else {
-            rc = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_0);
-        }
-        return rc;
+        return HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_0);
     }
 
  }
