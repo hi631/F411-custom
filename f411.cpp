@@ -15,7 +15,7 @@ namespace myExtension {
 }
 
     //%
-    void helloWorld(int value, int count) {
+    void f411_gpio(int value, int count) {
 
         int gpin=1 << value;
         init_gpio(GPIOC, gpin);
