@@ -21,11 +21,11 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "4.0.7",
+        "target": "4.0.8",
         "targetId": "arcade"
     },
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
